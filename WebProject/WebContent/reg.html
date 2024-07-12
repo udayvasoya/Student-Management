@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .form-container {
+        width: 400px;
+        background: linear-gradient(#212121, #212121) padding-box,
+          linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+        border: 5px solid transparent;
+        padding: 32px 24px;
+        font-size: 14px;
+        font-family: inherit;
+        color: white;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        gap: 20px;
+        box-sizing: border-box;
+        border-radius: 16px;
+        background-size: 200% 100%;
+        animation: gradient 5s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .form-container button:active {
+        scale: 0.95;
+      }
+
+      .form-container .form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .form-container .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .form-container .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #c5c5c5;
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      .form-container .form-group input {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 8px;
+        color: #fff;
+        font-family: inherit;
+        background-color: transparent;
+        border: 1px solid #414141;
+      }
+
+      .form-container .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 8px;
+        resize: none;
+        color: #fff;
+        height: 96px;
+        border: 1px solid #414141;
+        background-color: transparent;
+        font-family: inherit;
+      }
+
+      .form-container .form-group input::placeholder {
+        opacity: 0.5;
+      }
+
+      .form-container .form-group input:focus {
+        outline: none;
+        border-color: #e81cff;
+      }
+
+      .form-container .form-group textarea:focus {
+        outline: none;
+        border-color: #e81cff;
+      }
+
+      .form-container .form-submit-btn {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        align-self: flex-start;
+        font-family: inherit;
+        color: #717171;
+        font-weight: 600;
+        width: 40%;
+        background: #313131;
+        border: 1px solid #414141;
+        padding: 12px 16px;
+        font-size: inherit;
+        gap: 8px;
+        margin-top: 8px;
+        cursor: pointer;
+        border-radius: 6px;
+
+        background: linear-gradient(#212121, #212121) padding-box,
+          linear-gradient(80deg, transparent 25%, #e81cff, #40c9ff) border-box;
+        border: 5px solid transparent;
+
+        flex-direction: column;
+        gap: 20px;
+        box-sizing: border-box;
+        border-radius: 16px;
+        background-size: 200% 100%;
+        animation: gradient 5s ease infinite;
+      }
+
+      .form-container .form-submit-btn:hover {
+        background-color: #fff;
+        border-color: #fff;
+      }
+      #bodyy {
+        background-image: url(./bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        width: 100%;
+      }
+      #dark {
+        background-color: rgba(3, 12, 20, 0.687);
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body id="bodyy">
+    <div id="dark">
+      <div class="form-container">
+        <form class="form" action="reg" method="post">
+          <div class="form-group">
+            <label>Name:</label>
+            <input class="field_class" name="name" type="text" />
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input class="field_class" name="email" type="text" />
+          </div>
+          <div class="form-group">
+            <label>Phone No:</label>
+            <input id="pass" class="field_class" name="phone" type="number" />
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input class="field_class" name="password" type="password" />
+          </div>
+
+          <button type="submit" class="form-submit-btn w-100">Sign Up</button>
+          <div class="form-group">
+            <!-- <label>Password:</label>
+            <input class="field_class" name="password" type="text" /> -->
+            <p>
+              Do have an account? we can click here!
+              <a href="login.html">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
